@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>OVER SHOP — Telegram Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0f1e 0%, #0b0b14 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 480px;
+            width: 100%;
+            background: rgba(18, 22, 35, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(59, 201, 255, 0.25);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 200, 255, 0.1) inset;
+            padding: 2rem 1.8rem 2.2rem;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+            border-color: rgba(0, 200, 255, 0.5);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px #00ccff33 inset;
+        }
+
+        /* иконка / логотип */
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #b0d4ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #00ccff20;
+            backdrop-filter: blur(4px);
+            border: 1px solid #00ccff40;
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            color: #9ad8ff;
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            color: #b9c7d9;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* кнопка 🆘 */
+        .btn-shop {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(95deg, #1e2a4a, #0f1428);
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid #00ccffaa;
+            box-shadow: 0 10px 20px -5px rgba(0, 150, 255, 0.3), 0 0 12px rgba(0, 210, 255, 0.4);
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .btn-shop:hover {
+            transform: scale(1.02);
+            background: linear-gradient(95deg, #2a3c6e, #161d3a);
+            border-color: #3bc9ff;
+            box-shadow: 0 15px 25px -5px #00a6ff80, 0 0 18px cyan;
+            text-shadow: 0 0 5px white;
+        }
+
+        /* вторая кнопка */
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid #4a5a7a;
+            border-radius: 60px;
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: #b9c7d9;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            border-color: #00ccff;
+            color: #00ccff;
+            background: #00ccff10;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.65rem;
+            color: #5a6e8a;
+            border-top: 1px solid #1e2a3a;
+            padding-top: 1.2rem;
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .btn-shop {
+                font-size: 1.2rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">🤖</div>
+        <h1>OVER SHOP</h1>
+        <div class="badge">⭐ BETA 2.0 | Telegram аккаунты</div>
+        
+        <div class="description">
+            🛒 Покупка аккаунтов Telegram<br>
+            💳 Пополнение через Stars<br>
+            🤖 Автовыдача номеров и кодов
+        </div>
+
+        <!-- ОСНОВНАЯ КНОПКА 🆘 НАШ БОТ -->
+        <a href="https://t.me/over_sh0p_bot" target="_blank" rel="noopener noreferrer" class="btn-shop">
+            🆘 Наш бот
+        </a>
+
+        <a href="https://t.me/arteemO_O" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            🆘 Поддержка
+        </a>
+
+        <footer>
+            © OVER SHOP • Работаем 24/7 • Безопасные сделки
+        </footer>
+    </div>
+</body>
+</html>
